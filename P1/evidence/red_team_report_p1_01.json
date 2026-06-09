@@ -1,0 +1,39 @@
+{
+  "attacks": [
+    {
+      "accepted_limit": false,
+      "attack": "1. Forge the quorum with the operator's own keys",
+      "defended": true,
+      "detail": "k operator-signed anchors claiming registry ids -> valid=[], witnessed=False. The operator cannot mint witnesses with keys it controls.",
+      "verdict": "DEFENDED \u2014 pinned-key match rejects operator-minted witnesses"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "2. Replay a witness cosignature onto a rewritten root",
+      "defended": true,
+      "detail": "witness-0's cosig over R transplanted onto R' -> valid=[], witnessed=False. The cosignature covers the root, so it won't verify on R'.",
+      "verdict": "DEFENDED \u2014 a cosignature binds the exact root"
+    },
+    {
+      "accepted_limit": true,
+      "attack": "3. >= k colluding witnesses witness a forged root",
+      "defended": false,
+      "detail": "3 genuine witnesses co-sign a forged root -> witnessed=True. Quorum defends up to (k-1) dishonest witnesses; at k it falls. k/n + independence + who-pays-without-recentralizing is the economic question (G3), not solved here.",
+      "verdict": "ACCEPTED LIMIT \u2014 at >= k collusion a lie can be witnessed (gate G3)"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "4. Self-equivocating witness (one witness, two roots)",
+      "defended": true,
+      "detail": "witness-0 cosigns both R and R' at the same (log_id, tree_size) -> conflicts=1. Comparing statements reveals the fork regardless of who signed.",
+      "verdict": "DEFENDED \u2014 equivocation is caught even with a single witness"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "5. Over-claim audit",
+      "defended": true,
+      "detail": "over-claim hits: none; discloses collusion/G3: True; discloses liveness: True.",
+      "verdict": "DEFENDED \u2014 discloses the >=k-collusion and liveness limits"
+    }
+  ]
+}
