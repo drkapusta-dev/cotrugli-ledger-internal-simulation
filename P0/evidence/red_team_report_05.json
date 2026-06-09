@@ -1,0 +1,29 @@
+{
+  "attacks": [
+    {
+      "attack": "1. Cross-batch proof replay",
+      "defended": true,
+      "detail": "item from the 100-batch verified against the 200-batch root = False. Different root -> rejected; a proof is bound to its own batch."
+    },
+    {
+      "attack": "2. Index manipulation (claim a different leaf index)",
+      "defended": true,
+      "detail": "item 20's commitment+proof claimed at index 21 -> verifies=False (the audit path reconstructs a different root)."
+    },
+    {
+      "attack": "3. Truncate / extend the batch",
+      "defended": true,
+      "detail": "dropping one item -> root sha256:0bfd66092\u2026; adding one -> sha256:342279c3d\u2026; both differ from the pinned full root sha256:9057075cf\u2026 -> detectable."
+    },
+    {
+      "attack": "4. Leaf/node confusion (node hash as a leaf)",
+      "defended": true,
+      "detail": "presenting an internal node hash as a leaf commitment -> verifies=False. RFC 6962 prefixes leaves (0x00) and nodes (0x01) differently, so a node can't masquerade as a leaf (second-preimage resistance)."
+    },
+    {
+      "attack": "5. Over-claim audit (anchoring cost)",
+      "defended": true,
+      "detail": "over-claim hits (excl. disclosures): none; discloses amortize-not-free: True; discloses O(N) off-ledger storage: True."
+    }
+  ]
+}

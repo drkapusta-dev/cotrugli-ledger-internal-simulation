@@ -1,0 +1,57 @@
+{
+  "honest_limits": [
+    "SIMULATION on SYNTHETIC data \u2014 not a compliance/conformity claim.",
+    "ONE signature for N items is the ON-LEDGER cost win; batching AMORTIZES anchoring, it does not make it free (the single checkpoint still has a real on-ledger cost).",
+    "Bigger batches DELAY an item's provable-anchoring until the batch seals (cost<->timeliness).",
+    "Off-ledger blob storage scales O(N) (lossless-compressed); the on-ledger commitment stays tiny.",
+    "Timing is hardware-dependent and informational only; the determinism guarantee is the ROOT."
+  ],
+  "per_size": [
+    {
+      "all_items_verified": true,
+      "anchor_ms": 13.6,
+      "log2n_bound": 8,
+      "max_inclusion_proof_len": 7,
+      "n": 100,
+      "num_signatures": 1,
+      "offledger_compressed_bytes": 21335,
+      "proof_within_log_bound": true,
+      "root": "sha256:49b543efb02725ae54ef501fe7b5841c6ac4541275105f5e73187d83574c8018",
+      "tree_size": 100,
+      "verify_ms": 18.0
+    },
+    {
+      "all_items_verified": true,
+      "anchor_ms": 243.6,
+      "log2n_bound": 10,
+      "max_inclusion_proof_len": 9,
+      "n": 500,
+      "num_signatures": 1,
+      "offledger_compressed_bytes": 107190,
+      "proof_within_log_bound": true,
+      "root": "sha256:d21b4c6b0519d7122cf2b535ae690e48ab0ed1d908cb46a9bb4e03dd4434116f",
+      "tree_size": 500,
+      "verify_ms": 90.7
+    },
+    {
+      "all_items_verified": true,
+      "anchor_ms": 946.9,
+      "log2n_bound": 11,
+      "max_inclusion_proof_len": 10,
+      "n": 1000,
+      "num_signatures": 1,
+      "offledger_compressed_bytes": 214570,
+      "proof_within_log_bound": true,
+      "root": "sha256:1e19ed6b311bd8b0b162077636c6f06bfcaaa7f9e7eb52181f9be9a8f201f31d",
+      "tree_size": 1000,
+      "verify_ms": 180.9
+    }
+  ],
+  "run_id": "P0-AIAct-Track1-2026-06-09",
+  "scenario_id": "P0-05-LargeBatchAnchoring",
+  "sizes": [
+    100,
+    500,
+    1000
+  ]
+}
