@@ -1,0 +1,356 @@
+{
+  "all_items_full_chain_ok": true,
+  "checkpoint_kid": "cise-p0-happy-k1",
+  "honest_limits": [
+    "SIMULATION on SYNTHETIC data \u2014 not a compliance/conformity claim.",
+    "Assurance != certification \u00b7 Anchored != settled \u00b7 Verified != content-authenticated.",
+    "Commitment binds to CORE NCTE_AI_ACT_EVIDENCE_BOUNDARY_v0_1 (hash_only.v0_1)."
+  ],
+  "merkle_root": "sha256:1b572772c0e2a996d70e3975307531cde351d7e93feab3f724de8b7a700dd220",
+  "num_items": 30,
+  "per_item": [
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:83eafca30dbcfd1e8a092730c1bdc2cdf2a5825b5afaa26b330400419a0514f8",
+      "index": 0
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:c529bfeac2c86aed176293732d1bf77374414dc20d78e261f98c253b67de2f48",
+      "index": 1
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:252e008569d106d3489b89e7ef6138783ae43e33ad3810d0c223569505f88f36",
+      "index": 2
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:ff47cc399ed4a655aefcd514b3f1886ce77c67450bc13c8b0a6aaeebd6c454bf",
+      "index": 3
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:befa2e18680ec6cdd3dff6447dae35029f90845ba8a2b232cc082cfc7618c81f",
+      "index": 4
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:7e88b75917b966e4dc79daaf456f7bf54830943e4e929016926db0113b6c09b8",
+      "index": 5
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:50129def03e30c659651ef9676bdb7db43e28c0a82b4e65bc080f88b10b1c6c4",
+      "index": 6
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:01a77697c373678c99c9585b851fbf64dde1f76fc7f0ccf6259c097bc73fd832",
+      "index": 7
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:bb599af6e4b480b19f421875c95cd9b8aca0672adb7e8871a6de05b8ddb58a81",
+      "index": 8
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:2ac27de3def1b329aa3e6bba437ccc4beffaf4e9eecd9a5da88bb675c3078acd",
+      "index": 9
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:fa9937f291d2c8985c3b135890d29e7291f27ac09569520dfebd2c50de8bf546",
+      "index": 10
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:9ba944a24666b59d66464abfb50c98af251b2ab673d3b7bd71eb0a740bf80c69",
+      "index": 11
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:2c3ae0bd19c4ae3535ce160fdb6ef12f21b2891cad3cc5ac0758f0200a6d8a5a",
+      "index": 12
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:76ef7c87c3c44e6cd6b1b010d586656bfa2d3f8fded3fcbaa4df4d3375fd6d2b",
+      "index": 13
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:2899a7eac604f84da94cc7cd069a2fd49e51bbdab305e6b007e1ac2cccbf8c1f",
+      "index": 14
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:943b527cfb511b0c98fb9a2fd46d23671a48afb48d9c23fa849d4922615003d0",
+      "index": 15
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:d13adb8820a7614620f1310b2bbc9787204be9eededc7b412991f282d4868bc5",
+      "index": 16
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:37d8c8633bbf001a3be3c8dd1179b80d2cca0e82f1e56cfcbecdab7e9b76a726",
+      "index": 17
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:7c5e419a9135053f91e20cf1d769d82bc85bfc7ef44a2c7c64687a9ac17b0311",
+      "index": 18
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:ea696c5e1cd9a26e80ba8e84003423d5a19a3117cdd5f70be5a3e13bb01f3986",
+      "index": 19
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:06bbf06b4312ad671f628afd0d8fdd0a2b974a3543acd5064666f84787c6f7dd",
+      "index": 20
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:6b115a62c24ee97b5b7167bd44d488e4491e9f7a10a2f8d6da14caddf0c10f6a",
+      "index": 21
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:4f79b2751cd41bb6f3f88697ea164392c0e15ee39930bca9b9be51b00028d57c",
+      "index": 22
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:2d432c3bcc2b9f2e29c9bc88491cea2ac64f1c2b4100e064616a2b00a16652e0",
+      "index": 23
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:2d1d14dc868268a2fe6365fec3ef1f11108ce8c0a8235a3fff5cf7b19ce02705",
+      "index": 24
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:ea09a5334b83d97055abb7a4040e72468df3e29e34cc36c69a1b1bbfdad86099",
+      "index": 25
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:ef9a78a5ec17c81dc35a3b4c5379cf4f1ed44e72067585dc5be08761560d2a4f",
+      "index": 26
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:3361298776679661fd2e071df6a5e5a089c4fff401be2de1658fb0448eb2d2c1",
+      "index": 27
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:34a049c8c0bb538d58850c64a05bba64a6ddde45c019b4776e7e4876ea9334b6",
+      "index": 28
+    },
+    {
+      "chain_ok": true,
+      "checks": {
+        "blob_intact": true,
+        "checkpoint_signature": true,
+        "merkle_inclusion": true,
+        "root_binds_batch": true
+      },
+      "commitment": "sha256:e4fda58177e9000d6f6d0cbb2c5ec3267fc2955c10e9b46b32bf321c426ddbc7",
+      "index": 29
+    }
+  ],
+  "run_id": "P0-AIAct-Track1-2026-06-09",
+  "scenario_id": "P0-01-HappyPath",
+  "tamper_probe": {
+    "checks": {
+      "blob_intact": false,
+      "checkpoint_signature": true,
+      "merkle_inclusion": true,
+      "root_binds_batch": true
+    },
+    "detected": true,
+    "index": 7
+  },
+  "tree_size": 30
+}

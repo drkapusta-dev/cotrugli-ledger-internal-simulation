@@ -1,0 +1,26 @@
+{
+  "attacks": [
+    {
+      "attack": "1. Forge/tamper an item so it verifies",
+      "defended": true,
+      "detail": "(a) swap blob, keep commitment -> blob_intact=False (rejected=True); (b) forge matching commitment -> merkle_inclusion=False (rejected=True). Either path is rejected: you cannot keep the anchored commitment with forged bytes, and a forged commitment is not a leaf under the signed root."
+    },
+    {
+      "attack": "2. Swap inclusion proof / index to another leaf",
+      "defended": true,
+      "detail": "(a) i's commitment + j's proof -> verifies=False; (b) i's proof claiming index j -> verifies=False. The audit path reconstructs a DIFFERENT root, so both are rejected."
+    },
+    {
+      "accepted_limit": true,
+      "attack": "3. Re-sign a forged root with a look-alike key",
+      "defended": true,
+      "detail": "(a) forged root signed by attacker, verified against the PINNED issuer key -> verifies=False (rejected). (b) attacker also swaps the shipped jwks to their own key -> verifies=True. ACCEPTED LIMIT: offline verification proves internal consistency + that SOME key signed it; the verifier MUST pin the issuer key out-of-band. A package whose own jwks is blindly trusted can be self-consistently forged \u2014 so the issuer key is distributed/pinned separately, not from the package."
+    },
+    {
+      "attack": "4. Over-claim audit (claim discipline)",
+      "defended": true,
+      "detail": "forbidden-phrase hits in machine artifacts: none; honest_limits present in report: True. Artifacts carry structural facts + disclosed limits only \u2014 no compliance/certification language."
+    }
+  ],
+  "baseline_intact": true
+}

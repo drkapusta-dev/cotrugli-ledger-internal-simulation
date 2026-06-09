@@ -1,0 +1,482 @@
+[
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-000",
+    "input_hash": "sha256:input-0000",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12450.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:00Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-001",
+    "input_hash": "sha256:input-0001",
+    "mandate": "read-only-document",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12451.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:01Z",
+    "tool": "summarize_document"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-002",
+    "input_hash": "sha256:input-0002",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12452.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:02Z",
+    "tool": "check_account_balance"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-003",
+    "input_hash": "sha256:input-0003",
+    "mandate": "read-only-analytics",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12453.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:03Z",
+    "tool": "classify_transaction"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-004",
+    "input_hash": "sha256:input-0004",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12454.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:04Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-005",
+    "input_hash": "sha256:input-0005",
+    "mandate": "read-only-document",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12455.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:05Z",
+    "tool": "summarize_document"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-006",
+    "input_hash": "sha256:input-0006",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12456.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:06Z",
+    "tool": "check_account_balance"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-007",
+    "input_hash": "sha256:input-0007",
+    "mandate": "read-only-analytics",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12457.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:07Z",
+    "tool": "classify_transaction"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-008",
+    "input_hash": "sha256:input-0008",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12458.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:08Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-009",
+    "input_hash": "sha256:input-0009",
+    "mandate": "read-only-document",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12459.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:09Z",
+    "tool": "summarize_document"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-010",
+    "input_hash": "sha256:input-000a",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12460.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:10Z",
+    "tool": "check_account_balance"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-011",
+    "input_hash": "sha256:input-000b",
+    "mandate": "read-only-analytics",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12461.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:11Z",
+    "tool": "classify_transaction"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-012",
+    "input_hash": "sha256:input-000c",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12462.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:12Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-013",
+    "input_hash": "sha256:input-000d",
+    "mandate": "read-only-document",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12463.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:13Z",
+    "tool": "summarize_document"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-014",
+    "input_hash": "sha256:input-000e",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12464.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:14Z",
+    "tool": "check_account_balance"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-015",
+    "input_hash": "sha256:input-000f",
+    "mandate": "read-only-analytics",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12465.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:15Z",
+    "tool": "classify_transaction"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-016",
+    "input_hash": "sha256:input-0010",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12466.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:16Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-017",
+    "input_hash": "sha256:input-0011",
+    "mandate": "read-only-document",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12467.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:17Z",
+    "tool": "summarize_document"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-018",
+    "input_hash": "sha256:input-0012",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12468.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:18Z",
+    "tool": "check_account_balance"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-019",
+    "input_hash": "sha256:input-0013",
+    "mandate": "read-only-analytics",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12469.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:19Z",
+    "tool": "classify_transaction"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-020",
+    "input_hash": "sha256:input-0014",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12470.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:20Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-021",
+    "input_hash": "sha256:input-0015",
+    "mandate": "read-only-document",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12471.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:21Z",
+    "tool": "summarize_document"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-022",
+    "input_hash": "sha256:input-0016",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12472.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:22Z",
+    "tool": "check_account_balance"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-023",
+    "input_hash": "sha256:input-0017",
+    "mandate": "read-only-analytics",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12473.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:23Z",
+    "tool": "classify_transaction"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-024",
+    "input_hash": "sha256:input-0018",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12474.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:24Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-025",
+    "input_hash": "sha256:input-0019",
+    "mandate": "read-only-document",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12475.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:25Z",
+    "tool": "summarize_document"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-026",
+    "input_hash": "sha256:input-001a",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12476.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:26Z",
+    "tool": "check_account_balance"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-027",
+    "input_hash": "sha256:input-001b",
+    "mandate": "read-only-analytics",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12477.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:27Z",
+    "tool": "classify_transaction"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-028",
+    "input_hash": "sha256:input-001c",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12478.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:28Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "event_class": "AGENT_ACTION",
+    "id": "tool-call-029",
+    "input_hash": "sha256:input-001d",
+    "mandate": "read-only-document",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12479.75,
+      "currency": "EUR",
+      "risk_level": "low",
+      "status": "success"
+    },
+    "timestamp": "2026-06-09T09:00:29Z",
+    "tool": "summarize_document"
+  }
+]
