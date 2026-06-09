@@ -1,0 +1,93 @@
+{
+  "all_items_full_chain_ok": true,
+  "checkpoint_kid": "cise-p0-error-k1",
+  "corrupt_blob": {
+    "checks": {
+      "blob_intact": false,
+      "checkpoint_signature": true,
+      "merkle_inclusion": true,
+      "root_binds_batch": true
+    },
+    "detected": true,
+    "index": 1
+  },
+  "honest_limits": [
+    "SIMULATION on SYNTHETIC data \u2014 not a compliance/conformity claim.",
+    "Recovery = append a NEW record; the failure is PERMANENT on the chain (immutability).",
+    "The spine DETECTS a corrupted off-ledger blob and says which item, but cannot RECOVER its content (content is off-ledger; re-fetch from source/custody is required).",
+    "Omission BEFORE ingestion cannot be proven absent by the spine alone (needs heartbeat/sequence, P1+); within an anchored batch, dropping an item changes the root.",
+    "Assurance != certification \u00b7 Anchored != settled \u00b7 recovery != erasure of failure."
+  ],
+  "merkle_root": "sha256:2295e9501d4c58bae231bbf8dec6a92ef0fdd1b1a92ab9bbecd55f99c5a51b04",
+  "num_items": 24,
+  "recovery_append_only": true,
+  "recovery_detail": [
+    {
+      "prior_failure_persists": true,
+      "prior_present": true,
+      "prior_verifies": true,
+      "retry": "op-01-a2",
+      "retry_of": "op-01-a1",
+      "separate_leaf": true
+    },
+    {
+      "prior_failure_persists": true,
+      "prior_present": true,
+      "prior_verifies": true,
+      "retry": "op-04-a2",
+      "retry_of": "op-04-a1",
+      "separate_leaf": true
+    },
+    {
+      "prior_failure_persists": true,
+      "prior_present": true,
+      "prior_verifies": true,
+      "retry": "op-04-a3",
+      "retry_of": "op-04-a2",
+      "separate_leaf": true
+    },
+    {
+      "prior_failure_persists": true,
+      "prior_present": true,
+      "prior_verifies": true,
+      "retry": "op-08-a2",
+      "retry_of": "op-08-a1",
+      "separate_leaf": true
+    },
+    {
+      "prior_failure_persists": true,
+      "prior_present": true,
+      "prior_verifies": true,
+      "retry": "op-10-a2",
+      "retry_of": "op-10-a1",
+      "separate_leaf": true
+    },
+    {
+      "prior_failure_persists": true,
+      "prior_present": true,
+      "prior_verifies": true,
+      "retry": "op-12-a2",
+      "retry_of": "op-12-a1",
+      "separate_leaf": true
+    },
+    {
+      "prior_failure_persists": true,
+      "prior_present": true,
+      "prior_verifies": true,
+      "retry": "op-15-a2",
+      "retry_of": "op-15-a1",
+      "separate_leaf": true
+    }
+  ],
+  "retry_count": 7,
+  "run_id": "P0-AIAct-Track1-2026-06-09",
+  "scenario_id": "P0-02-ErrorRecovery",
+  "status_faithful": true,
+  "status_histogram": {
+    "error": 5,
+    "partial": 2,
+    "success": 14,
+    "timeout": 3
+  },
+  "tree_size": 24
+}

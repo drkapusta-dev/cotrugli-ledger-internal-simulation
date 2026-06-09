@@ -1,0 +1,456 @@
+[
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-00-a1",
+    "input_hash": "sha256:input-0000",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12450.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": null,
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:00Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": {
+      "code": "UPSTREAM_5XX",
+      "message_hash": "sha256:err-0001"
+    },
+    "event_class": "AGENT_ACTION",
+    "id": "op-01-a1",
+    "input_hash": "sha256:input-0001",
+    "mandate": "write-ledger",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": null,
+    "retry_of": null,
+    "status": "error",
+    "timestamp": "2026-06-09T10:00:01Z",
+    "tool": "post_ledger_entry"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 2,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-01-a2",
+    "input_hash": "sha256:input-0002",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12452.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": "op-01-a1",
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:02Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-02-a1",
+    "input_hash": "sha256:input-0003",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12453.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": null,
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:03Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": {
+      "code": "TRUNCATED_RESULT",
+      "message_hash": "sha256:err-0004"
+    },
+    "event_class": "AGENT_ACTION",
+    "id": "op-03-a1",
+    "input_hash": "sha256:input-0004",
+    "mandate": "read-only-document",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "fields_expected": 5,
+      "fields_returned": 2,
+      "status": "partial"
+    },
+    "retry_of": null,
+    "status": "partial",
+    "timestamp": "2026-06-09T10:00:04Z",
+    "tool": "summarize_document"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": {
+      "code": "DEADLINE_EXCEEDED",
+      "message_hash": "sha256:err-0005"
+    },
+    "event_class": "AGENT_ACTION",
+    "id": "op-04-a1",
+    "input_hash": "sha256:input-0005",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": null,
+    "retry_of": null,
+    "status": "timeout",
+    "timestamp": "2026-06-09T10:00:05Z",
+    "tool": "check_account_balance"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 2,
+    "error": {
+      "code": "UPSTREAM_5XX",
+      "message_hash": "sha256:err-0006"
+    },
+    "event_class": "AGENT_ACTION",
+    "id": "op-04-a2",
+    "input_hash": "sha256:input-0006",
+    "mandate": "write-ledger",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": null,
+    "retry_of": "op-04-a1",
+    "status": "error",
+    "timestamp": "2026-06-09T10:00:06Z",
+    "tool": "post_ledger_entry"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 3,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-04-a3",
+    "input_hash": "sha256:input-0007",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12457.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": "op-04-a2",
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:07Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-05-a1",
+    "input_hash": "sha256:input-0008",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12458.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": null,
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:08Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": {
+      "code": "UPSTREAM_5XX",
+      "message_hash": "sha256:err-0009"
+    },
+    "event_class": "AGENT_ACTION",
+    "id": "op-06-a1",
+    "input_hash": "sha256:input-0009",
+    "mandate": "write-ledger",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": null,
+    "retry_of": null,
+    "status": "error",
+    "timestamp": "2026-06-09T10:00:09Z",
+    "tool": "post_ledger_entry"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-07-a1",
+    "input_hash": "sha256:input-000a",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12460.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": null,
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:10Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": {
+      "code": "DEADLINE_EXCEEDED",
+      "message_hash": "sha256:err-000b"
+    },
+    "event_class": "AGENT_ACTION",
+    "id": "op-08-a1",
+    "input_hash": "sha256:input-000b",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": null,
+    "retry_of": null,
+    "status": "timeout",
+    "timestamp": "2026-06-09T10:00:11Z",
+    "tool": "check_account_balance"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 2,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-08-a2",
+    "input_hash": "sha256:input-000c",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12462.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": "op-08-a1",
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:12Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-09-a1",
+    "input_hash": "sha256:input-000d",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12463.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": null,
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:13Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": {
+      "code": "TRUNCATED_RESULT",
+      "message_hash": "sha256:err-000e"
+    },
+    "event_class": "AGENT_ACTION",
+    "id": "op-10-a1",
+    "input_hash": "sha256:input-000e",
+    "mandate": "read-only-document",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "fields_expected": 5,
+      "fields_returned": 2,
+      "status": "partial"
+    },
+    "retry_of": null,
+    "status": "partial",
+    "timestamp": "2026-06-09T10:00:14Z",
+    "tool": "summarize_document"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 2,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-10-a2",
+    "input_hash": "sha256:input-000f",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12465.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": "op-10-a1",
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:15Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-11-a1",
+    "input_hash": "sha256:input-0010",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12466.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": null,
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:16Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": {
+      "code": "UPSTREAM_5XX",
+      "message_hash": "sha256:err-0011"
+    },
+    "event_class": "AGENT_ACTION",
+    "id": "op-12-a1",
+    "input_hash": "sha256:input-0011",
+    "mandate": "write-ledger",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": null,
+    "retry_of": null,
+    "status": "error",
+    "timestamp": "2026-06-09T10:00:17Z",
+    "tool": "post_ledger_entry"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 2,
+    "error": {
+      "code": "UPSTREAM_5XX",
+      "message_hash": "sha256:err-0012"
+    },
+    "event_class": "AGENT_ACTION",
+    "id": "op-12-a2",
+    "input_hash": "sha256:input-0012",
+    "mandate": "write-ledger",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": null,
+    "retry_of": "op-12-a1",
+    "status": "error",
+    "timestamp": "2026-06-09T10:00:18Z",
+    "tool": "post_ledger_entry"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-13-a1",
+    "input_hash": "sha256:input-0013",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12469.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": null,
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:19Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-14-a1",
+    "input_hash": "sha256:input-0014",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12470.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": null,
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:20Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": {
+      "code": "DEADLINE_EXCEEDED",
+      "message_hash": "sha256:err-0015"
+    },
+    "event_class": "AGENT_ACTION",
+    "id": "op-15-a1",
+    "input_hash": "sha256:input-0015",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": null,
+    "retry_of": null,
+    "status": "timeout",
+    "timestamp": "2026-06-09T10:00:21Z",
+    "tool": "check_account_balance"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 2,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-15-a2",
+    "input_hash": "sha256:input-0016",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12472.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": "op-15-a1",
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:22Z",
+    "tool": "get_financial_summary"
+  },
+  {
+    "agent_id": "agent-prod-742",
+    "attempt": 1,
+    "error": null,
+    "event_class": "AGENT_ACTION",
+    "id": "op-16-a1",
+    "input_hash": "sha256:input-0017",
+    "mandate": "read-only-financial",
+    "policy_snapshot": "AI_ACT_TRACK1_v2026-06",
+    "result": {
+      "balance_eur": 12473.75,
+      "currency": "EUR",
+      "status": "success"
+    },
+    "retry_of": null,
+    "status": "success",
+    "timestamp": "2026-06-09T10:00:23Z",
+    "tool": "get_financial_summary"
+  }
+]
