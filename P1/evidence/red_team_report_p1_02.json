@@ -1,0 +1,46 @@
+{
+  "attacks": [
+    {
+      "accepted_limit": false,
+      "attack": "1. Corrupt k-1 witnesses and witness a lie",
+      "defended": true,
+      "detail": "3 corrupted witnesses on a forged root -> witnessed=False. The honest margin holds until the k-th corruption.",
+      "verdict": "DEFENDED \u2014 below k, a forged root is not witnessed"
+    },
+    {
+      "accepted_limit": true,
+      "attack": "2. Corrupt k witnesses + control selection (no honest asked)",
+      "defended": false,
+      "detail": "4 corrupted witnesses, no honest witness in the asked set -> witnessed=True. The margin is exactly k; raising it (independence, staking, who-pays) is gate G3, and a SILENT takeover also requires controlling who is asked.",
+      "verdict": "ACCEPTED LIMIT \u2014 break cost is k independent corruptions + selection control (G3)"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "3. k corrupted but an honest witness is still asked",
+      "defended": true,
+      "detail": "equivocation conflicts=1. With >=1 honest witness in the asked set, the forged root and the true root collide and are flagged.",
+      "verdict": "DEFENDED \u2014 one honest witness exposes the fork"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "4. Sybil: inject unregistered fake witnesses",
+      "defended": true,
+      "detail": "4 unregistered fake witnesses -> valid=[], witnessed=False. Reaching quorum from outside the registry is impossible; biasing SELECTION among registered witnesses is the disclosed limit (needs independent selection).",
+      "verdict": "DEFENDED \u2014 the pinned registry rejects unregistered witnesses"
+    },
+    {
+      "accepted_limit": true,
+      "attack": "5. Liveness DoS: take witnesses offline below k",
+      "defended": true,
+      "detail": "only 3 witnesses online (< k) -> witnessed=False (un-witnessed). Safety holds (never falsely witnessed); liveness is traded away \u2014 the layer would rather produce nothing than a falsely-witnessed root.",
+      "verdict": "DEFENDED (safety) + ACCEPTED LIMIT (liveness not guaranteed)"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "6. Over-claim audit",
+      "defended": true,
+      "detail": "over-claim hits: none; discloses k-corruption margin: True; discloses liveness-not-guaranteed: True.",
+      "verdict": "DEFENDED \u2014 discloses the k-corruption margin, selection-control, and liveness limits"
+    }
+  ]
+}
