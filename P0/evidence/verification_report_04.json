@@ -1,0 +1,23 @@
+{
+  "accepted_limit_unwitnessed_rewrite_internally_valid": true,
+  "honest_append_consistency": true,
+  "honest_limits": [
+    "SIMULATION on SYNTHETIC data \u2014 not a compliance/conformity claim.",
+    "The operator HOLDS THE KEY: the defense is detectability against an externally-witnessed prior root (RFC 6962 consistency), NOT preventing the operator from signing.",
+    "Without an external witness, a lone key-holding operator can produce a self-consistent rewritten history a fresh verifier cannot detect ('who attests the attestor?', I1).",
+    "Closing this needs an external witness / independent anchor / transparency log (P1+).",
+    "Assurance != certification \u00b7 Anchored != settled \u00b7 detectable-when-witnessed != operator-honest-on-its-own."
+  ],
+  "honest_root": "sha256:17ad2dca28f285f20ae76f10cfa8e762e5f233347727f9d9d4ab9fd98deb06b5",
+  "run_id": "P0-AIAct-Track1-2026-06-09",
+  "scenario_id": "P0-04-OperatorTamper",
+  "tamper_detection": {
+    "backdate_alter_value": true,
+    "drop_historical_entry": true,
+    "forged_checkpoint_detected": true,
+    "reorder_history": true,
+    "truncate_below_witnessed": true
+  },
+  "witnessed_root": "sha256:2bafef6f51584d4ed477406c17f0bf697831abe6415ca6a90dab3c5ecca2eb7b",
+  "witnessed_size": 16
+}
