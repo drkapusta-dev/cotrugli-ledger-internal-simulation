@@ -1,0 +1,46 @@
+{
+  "attacks": [
+    {
+      "accepted_limit": true,
+      "attack": "1. Claim erasure but secretly retain the content",
+      "defended": false,
+      "detail": "C2 (the erasure record) is witnessed=True; witnesses confirm a signed Certificate of Destruction was appended + ordered + co-signed \u2014 they cannot see inside custody. Proving the bytes are physically gone needs HSM/enclave attestation, a separate gate. P1-03 upgrades 'operator's word' to 'independently witnessed record', not to physical-destruction proof.",
+      "verdict": "ACCEPTED LIMIT \u2014 witnesses attest the RECORD, not physical destruction (enclave gate)"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "2. Repudiate: deny the erasure ever happened",
+      "defended": true,
+      "detail": "the erasure checkpoint is co-signed by 3 independent witnesses (witnessed=True); the operator cannot later claim it never happened \u2014 k independent parties recorded it.",
+      "verdict": "DEFENDED \u2014 a witnessed C2 is non-repudiable"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "3. Forge a witnessed erasure with operator-controlled keys",
+      "defended": true,
+      "detail": "k operator-signed 'witness' anchors -> valid=[], witnessed=False. The operator cannot manufacture a witnessed erasure without real witnesses.",
+      "verdict": "DEFENDED \u2014 pinned registry rejects operator-minted witnesses"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "4. Un-erase: roll back to before the certificate",
+      "defended": true,
+      "detail": "presenting the size-10 pre-erasure log against witnessed C2 (size 11) -> detected=True. The witnessed erasure checkpoint can't be undone unseen.",
+      "verdict": "DEFENDED \u2014 can't shrink below a witnessed C2"
+    },
+    {
+      "accepted_limit": true,
+      "attack": "5. Backdate the erasure (claim an earlier time)",
+      "defended": true,
+      "detail": "consistency enforces that the erasure was appended AFTER C1 (ordering can't be forged); but the recorded erased_at is operator-set and witness-observed \u2014 a precise real-world time needs an external time-anchor / VDF (carried from RUN 04).",
+      "verdict": "DEFENDED (ordering, after C1) + ACCEPTED LIMIT (exact wall-clock needs a time-anchor)"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "6. Over-claim audit",
+      "defended": true,
+      "detail": "over-claim hits: none; discloses not-physical-destruction: True; discloses G3 collusion: True.",
+      "verdict": "DEFENDED \u2014 discloses the physical-destruction and >=k-collusion limits"
+    }
+  ]
+}

@@ -40,7 +40,8 @@ cluster — RUN 04 operator-rewrite / I1 + equivocation).
 | # | Scenario | What it tests | Score |
 |---|---|---|---|
 | 01 | [Witness Ring](P1/scenarios/RUN_P1_01_REPORT.md) | k-of-n witnessed checkpoints; operator can't forge quorum or transplant cosigs; equivocation detection | **9.1** |
-| 02 | [Witness Long Game](P1/scenarios/RUN_P1_02_REPORT.md) | liveness vs safety threshold; gradual corruption (security margin = k); sybil on witness selection | *pending* |
+| 02 | [Witness Long Game](P1/scenarios/RUN_P1_02_REPORT.md) | liveness vs safety threshold; gradual corruption (security margin = k); sybil on witness selection | **9.3** |
+| 03 | [Erasure Witness](P1/scenarios/RUN_P1_03_REPORT.md) | independently-witnessed erasure (closes RUN 06 self-attestation); non-repudiation; un-erase detection | *pending* |
 
 Honest boundary carried into P1: **≥ k colluding witnesses can still witness a lie** → who-runs/pays
 the witnesses without re-centralizing is the economic question (**gate G3**).
