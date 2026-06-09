@@ -1,0 +1,25 @@
+{
+  "attacks": [
+    {
+      "attack": "1. Rewrite a failure as a success",
+      "defended": true,
+      "detail": "keep-commitment -> blob_intact=False; forge-commitment -> merkle_inclusion=False. A failure cannot be silently turned into a success under the signed root."
+    },
+    {
+      "accepted_limit": true,
+      "attack": "2. Drop a failed attempt from an anchored batch",
+      "defended": true,
+      "detail": "dropping item #1 yields root sha256:8b8f745fa3a\u2026 != pinned sha256:2295e9501d4\u2026 -> rejected against the pinned root. ACCEPTED LIMIT: omission BEFORE ingestion (an event that never enters the batch) cannot be proven absent by the spine alone \u2014 needs heartbeat/sequence (P1+)."
+    },
+    {
+      "attack": "3. Launder a failure via a forged 'successful retry'",
+      "defended": true,
+      "detail": "forged retry under signed root -> included=False (rejected); the original failure leaf still verifies (blob_intact=True). A retry NEVER deletes the prior failure \u2014 recovery is append-only, not erasure."
+    },
+    {
+      "attack": "4. Over-claim audit (recovery discipline)",
+      "defended": true,
+      "detail": "forbidden/over-claim hits: none; honest_limits present: True; non-success records still counted in histogram: 10. Artifacts record failures as failures and disclose limits \u2014 recovery is not sold as erasure."
+    }
+  ]
+}
