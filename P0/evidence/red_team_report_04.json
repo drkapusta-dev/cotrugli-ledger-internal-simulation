@@ -1,0 +1,32 @@
+{
+  "attacks": [
+    {
+      "accepted_limit": false,
+      "attack": "1. Forge a consistency proof (R1 -> tampered)",
+      "defended": true,
+      "detail": "attempts {'honest_proof_for_tampered_root': False, 'empty_proof': False, 'garbage_proof': False} \u2014 all rejected. RFC 6962 consistency cannot be forged to make a tampered history extend the witnessed root.",
+      "verdict": "DEFENDED \u2014 no fabricated consistency proof verifies"
+    },
+    {
+      "accepted_limit": true,
+      "attack": "2. Equivocation / split view (two histories to two parties)",
+      "defended": false,
+      "detail": "both forks are validly signed by the operator (sigs_valid=True); a lone verifier sees only its own root. Cross-comparison catches it (roots differ=True) \u2014 i.e. detection requires independent witnesses comparing notes (a transparency-log / witness-ring property, P1+).",
+      "verdict": "ACCEPTED LIMIT \u2014 needs a witness network/gossip; a single verifier can't detect a fork"
+    },
+    {
+      "accepted_limit": true,
+      "attack": "3. Backdate via a self-asserted timestamp",
+      "defended": true,
+      "detail": "forcing the event into the historical ORDER breaks consistency (detected=True). But the spine attests the RECORDED timestamp, not real time \u2014 a self-asserted timestamp value needs an external time-anchor / VDF / witnessed checkpoint time to be trustworthy (P1+).",
+      "verdict": "DEFENDED (ordering) + ACCEPTED LIMIT (the recorded timestamp is operator-asserted)"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "4. Over-claim audit (does it claim the operator can't tamper?)",
+      "defended": true,
+      "detail": "forbidden/over-claim hits: none; honest_limits present: True; discloses external-witness requirement: True.",
+      "verdict": "DEFENDED \u2014 discloses the witness-conditional limit; no unconditional claim"
+    }
+  ]
+}
