@@ -67,6 +67,28 @@ Let:
 use-case's `G`, AND no single funder controls ≥ `(n − k + 1)` witnesses.** P1-02 gives `k`; this gate
 chooses `S`, `n`, and the funding split so the inequality holds with margin.
 
+## 4b. Simulation validation (v0.1) — `P1/scripts/run_g3_witness_economics.py`
+
+A small, deterministic economic simulation checks all four mechanisms and — importantly — that the
+gate **discriminates** (it must say NO-GO when the economics don't hold). Results in
+`gates/G3_economics_sim_results.json`.
+
+Parameters: `n = 7`, `k = 4`, stake `S = 100k`, income `5k/round`, horizon `20`, discount `0.95`
+→ bribe/witness ≈ **164k**, cost-to-corrupt-k ≈ **657k**. Detection lag `2` rounds (slashing +
+replacement). Gradual corruption run for 30 rounds.
+
+| Scenario | Cost-to-corrupt vs G | Gradual corruption | Single-funder guard | Verdict |
+|---|---|---|---|---|
+| **AI Act evidence (disciplined)** — G = 200k, funders split 2/2/2/1 | 657k > 200k ✅ | max simultaneous **2/4**, never reaches k (break threshold 328k/round > 200k budget) ✅ | max coverage 2 < cap 4 ✅ | **GO** |
+| High-stakes settlement — G = 2,000k | 657k < 2,000k ❌ | (n/a) | ✅ | **NO-GO** |
+| Operator funds everyone — one funder covers all 7 | ✅ | ✅ | 7 ≥ cap 4 ❌ | **NO-GO** |
+
+Reading: for the **first use-case (AI Act evidence, low G) with disciplined, diversified funding the
+gate is GO** — corrupting a quorum costs ~3× the value of the lie, slashing keeps the simultaneously-
+corrupted count at 2 of 4 under sustained attack, and no funder can buy a quorum. The two NO-GO probes
+confirm the gate is not a rubber stamp: it fails on **funder capture** and on **too-high `G`** (the
+layer is not sized for high-stakes settlement without larger stakes / more witnesses).
+
 ## 5. What stays open (honest)
 - Exact `G` per use-case (AI Act evidence vs higher-stakes settlement) — sizing `S`/`n` follows from it.
 - Legal form of stake/fees in the EU (governance + counsel; overlaps **G1**).
