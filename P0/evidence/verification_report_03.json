@@ -1,0 +1,30 @@
+{
+  "all_events_full_chain_ok": true,
+  "checkpoint_kid": "cise-p0-bypass-gw-k1",
+  "decision_histogram": {
+    "allow": 24,
+    "deny": 4
+  },
+  "deny_count": 4,
+  "deny_evidence_first_class": true,
+  "honest_limits": [
+    "SIMULATION on SYNTHETIC data \u2014 not a compliance/conformity claim.",
+    "'No receipt -> no execution' is a CONTROL convention the boundary enforces, NOT a cryptographic proof that nothing happened outside it.",
+    "A true bypass (vendor call with no gateway receipt) is INVISIBLE to the proof spine alone; reconciliation against an independent vendor count surfaces only the NUMBER of unaccounted actions, not their content (from-ingestion-forward / garbage-in limit).",
+    "The spine attests a gateway DECISION was recorded; it does NOT attest the decision was CORRECT \u2014 decision correctness is policy/review, an overlay concern, not core.",
+    "Issuer/gateway key must be pinned out-of-band; a package whose own jwks is trusted can be self-consistently forged.",
+    "Assurance != certification \u00b7 Anchored != settled \u00b7 detect-within-boundary != prevent-all-bypass."
+  ],
+  "merkle_root": "sha256:d2620f0acf981e4086897ebebf9e71aa7246595f4fc04a815ddfa4ea59be1860",
+  "num_events": 28,
+  "reconciliation": {
+    "bypass_surfaced": true,
+    "gateway_count": 28,
+    "unaccounted": 3,
+    "vendor_observed_count": 31
+  },
+  "run_id": "P0-AIAct-Track1-2026-06-09",
+  "scenario_id": "P0-03-MaliciousBypass",
+  "sequence_contiguous": true,
+  "tree_size": 28
+}
