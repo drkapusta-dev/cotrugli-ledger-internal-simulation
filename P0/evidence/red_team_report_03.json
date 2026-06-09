@@ -1,0 +1,39 @@
+{
+  "attacks": [
+    {
+      "accepted_limit": true,
+      "attack": "1. Bypass the gateway entirely (no receipt)",
+      "defended": true,
+      "detail": "attacker cannot inject a fake anchored record (under-root check fails: forged-record-rejected=True); BUT the bypassed action itself is invisible to the spine \u2014 content unattestable. Reconciliation surfaced 3 unaccounted actions (gateway 28 vs vendor 31), surfaced=True. This is the from-ingestion-forward / 'no receipt -> no execution is a CONTROL convention' limit \u2014 disclosed, not solved.",
+      "verdict": "ACCEPTED LIMIT \u2014 spine cannot see a true bypass; only reconciliation surfaces the COUNT"
+    },
+    {
+      "accepted_limit": true,
+      "attack": "2. Semantic forgery (fake event + lie-in-valid-record)",
+      "defended": true,
+      "detail": "(a) plausible fake event spliced under the signed root -> verifies=False (rejected=True). (b) an event with decision='allow' for a WRITE under a read-only mandate, validly signed by the gateway key, verifies cryptographically=True. The spine attests the DECISION WAS RECORDED \u2014 it does NOT attest the decision was CORRECT. Catching a wrong-but-signed decision is a policy/review (overlay) job, not core. This is the sharpest honest limit a real 'wolf' finds.",
+      "verdict": "DEFENDED (fake injection) + ACCEPTED LIMIT (record attested, decision-correctness is not)"
+    },
+    {
+      "accepted_limit": true,
+      "attack": "3. Forge gateway authorization (look-alike key)",
+      "defended": true,
+      "detail": "forged root signed by attacker, checked against the PINNED gateway key -> verifies=False (rejected). If the attacker also swaps the shipped jwks -> verifies=True: the gateway key MUST be pinned out-of-band.",
+      "verdict": "DEFENDED vs pinned gateway key (+ issuer-pin accepted limit)"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "4. Replay an authorized receipt (double-execute)",
+      "defended": true,
+      "detail": "all 28 gateway_seq are unique (no duplicate authorization): True. A replay reuses the identical (seq, commitment) leaf -> a single-use consumer rejects the second use; the gateway controls seq issuance, so a replay cannot mint a new authorization. (Replay PREVENTION requires the executor to honor single-use.)",
+      "verdict": "DEFENDED within the boundary (unique seq; single-use enforced by consumer)"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "5. Over-claim audit (does it claim to prevent bypass?)",
+      "defended": true,
+      "detail": "forbidden/over-claim hits: none; honest_limits present: True; explicitly discloses the bypass control-convention limit: True.",
+      "verdict": "DEFENDED \u2014 the report discloses the bypass limit, claims detect-not-prevent"
+    }
+  ]
+}
