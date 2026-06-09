@@ -1,0 +1,99 @@
+{
+  "GO_criteria": [
+    "cost-to-corrupt (k*(stake+NPV income)) > value-of-lie G, with margin",
+    "no single funder covers >= (n-k+1) witnesses (single-funder guard rail)",
+    "under gradual corruption (slashing+replacement), simultaneous corrupted stays < k for the horizon given the attacker's per-round budget",
+    "blind pool + rotation: the attacker must corrupt a pool-wide quorum (no per-client targeting)"
+  ],
+  "NO_GO": "if any GO criterion fails -> reformulate (raise stake/n, lower G via use-case choice, diversify funders, or strengthen detection/slashing).",
+  "results": [
+    {
+      "blind_pool": {
+        "blind": true,
+        "note": "blind pool -> must corrupt a pool-wide quorum (k)",
+        "witnesses_attacker_must_corrupt": 4
+      },
+      "bribe_cost_per_witness": 164151.41,
+      "cost_gt_gain": true,
+      "cost_to_corrupt_k": 656605.63,
+      "gradual": {
+        "break_round": null,
+        "broke": false,
+        "budget_per_round_to_break": 328302.8155182915,
+        "detection_lag": 2,
+        "max_simultaneous_corrupted": 2,
+        "new_per_round": 1
+      },
+      "reasons": [],
+      "scenario": "ai_act_evidence_disciplined (target GO)",
+      "single_funder_guard": {
+        "guard_cap_exclusive": 4,
+        "max_single_funder_coverage": 2,
+        "ok": true,
+        "worst_funder": "coverage_fee_pool"
+      },
+      "value_of_lie_G": 200000,
+      "verdict": "GO"
+    },
+    {
+      "blind_pool": {
+        "blind": true,
+        "note": "blind pool -> must corrupt a pool-wide quorum (k)",
+        "witnesses_attacker_must_corrupt": 4
+      },
+      "bribe_cost_per_witness": 164151.41,
+      "cost_gt_gain": false,
+      "cost_to_corrupt_k": 656605.63,
+      "gradual": {
+        "break_round": null,
+        "broke": false,
+        "budget_per_round_to_break": 328302.8155182915,
+        "detection_lag": 2,
+        "max_simultaneous_corrupted": 2,
+        "new_per_round": 1
+      },
+      "reasons": [
+        "cost-to-corrupt 656,606 <= value-of-lie 2,000,000"
+      ],
+      "scenario": "high_stakes_settlement (NO-GO: G too high for these params)",
+      "single_funder_guard": {
+        "guard_cap_exclusive": 4,
+        "max_single_funder_coverage": 2,
+        "ok": true,
+        "worst_funder": "coverage_fee_pool"
+      },
+      "value_of_lie_G": 2000000,
+      "verdict": "NO-GO"
+    },
+    {
+      "blind_pool": {
+        "blind": true,
+        "note": "blind pool -> must corrupt a pool-wide quorum (k)",
+        "witnesses_attacker_must_corrupt": 4
+      },
+      "bribe_cost_per_witness": 164151.41,
+      "cost_gt_gain": true,
+      "cost_to_corrupt_k": 656605.63,
+      "gradual": {
+        "break_round": null,
+        "broke": false,
+        "budget_per_round_to_break": 328302.8155182915,
+        "detection_lag": 2,
+        "max_simultaneous_corrupted": 2,
+        "new_per_round": 1
+      },
+      "reasons": [
+        "single funder covers 7 >= cap 4 (can buy/disable a quorum)"
+      ],
+      "scenario": "operator_funds_everyone (NO-GO: funder capture)",
+      "single_funder_guard": {
+        "guard_cap_exclusive": 4,
+        "max_single_funder_coverage": 7,
+        "ok": false,
+        "worst_funder": "operator_treasury"
+      },
+      "value_of_lie_G": 200000,
+      "verdict": "NO-GO"
+    }
+  ]
+}
