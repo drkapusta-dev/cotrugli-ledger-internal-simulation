@@ -1,0 +1,95 @@
+{
+  "corruption_sweep": [
+    {
+      "corrupted": 0,
+      "lie_witnessed": false
+    },
+    {
+      "corrupted": 1,
+      "lie_witnessed": false
+    },
+    {
+      "corrupted": 2,
+      "lie_witnessed": false
+    },
+    {
+      "corrupted": 3,
+      "lie_witnessed": false
+    },
+    {
+      "corrupted": 4,
+      "lie_witnessed": true
+    }
+  ],
+  "equivocation_conflicts_on_honest_detection": [
+    {
+      "conflicting_roots": {
+        "sha256:46dc5e8aa034c4d76b80d215945a58229db70b084eb801bf43cd764eda8ad448": [
+          "witness-0",
+          "witness-1",
+          "witness-2",
+          "witness-3"
+        ],
+        "sha256:a98d55a4a7a08b7e502550a4ddca72fdb2b9962fe71c2cb36c1548156fae497e": [
+          "witness-4"
+        ]
+      },
+      "log_id": "witness-longgame-log-1",
+      "tree_size": 16
+    }
+  ],
+  "honest_limits": [
+    "SIMULATION on SYNTHETIC data \u2014 not a compliance/conformity claim.",
+    "The break cost is k INDEPENDENT corruptions \u2014 finite, and only as high as the witnesses are independent and not dependent on the operator (staking/slashing/who-pays = gate G3).",
+    "Silent takeover also needs SELECTION control: with >=1 honest witness asked, the lie is caught by equivocation; hiding it requires choosing who is asked -> independent/random witness selection is load-bearing.",
+    "Liveness is NOT guaranteed: enough witnesses offline -> no new witnessed checkpoint. The layer trades liveness for safety (rather produce nothing than a falsely-witnessed root).",
+    "Sybil is bounded by the PINNED registry (unregistered witnesses never count); selection bias among registered witnesses is the disclosed limit."
+  ],
+  "k": 4,
+  "liveness_sweep": [
+    {
+      "online": 7,
+      "witnessed": true
+    },
+    {
+      "online": 6,
+      "witnessed": true
+    },
+    {
+      "online": 5,
+      "witnessed": true
+    },
+    {
+      "online": 4,
+      "witnessed": true
+    },
+    {
+      "online": 3,
+      "witnessed": false
+    },
+    {
+      "online": 2,
+      "witnessed": false
+    },
+    {
+      "online": 1,
+      "witnessed": false
+    },
+    {
+      "online": 0,
+      "witnessed": false
+    }
+  ],
+  "liveness_threshold_online": 4,
+  "n": 7,
+  "pre_registered": {
+    "crossover_security_margin_is_k": true,
+    "honest_witness_detects_fork": true,
+    "liveness_safety_no_false_witnessing": true,
+    "safe_while_corrupted_below_k": true,
+    "sybil_unregistered_rejected": true
+  },
+  "run_id": "P1-Witness-2026-06-09",
+  "scenario_id": "P1-02-WitnessLongGame",
+  "security_margin_corruptions": 4
+}
