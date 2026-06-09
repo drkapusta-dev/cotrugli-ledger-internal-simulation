@@ -1,0 +1,49 @@
+{
+  "equivocation_conflicts": [
+    {
+      "conflicting_roots": {
+        "sha256:3ac45fe295e0dbffd9def6e5abb8858b1ccaba94bed5d9599375077f557f1c54": [
+          "witness-0",
+          "witness-1"
+        ],
+        "sha256:694cd1fc19768e331238dad0a75bb7d6ddbe5a9bec845c4e003b9e6ce0abc7c7": [
+          "witness-2",
+          "witness-3"
+        ]
+      },
+      "log_id": "witness-ring-log-1",
+      "tree_size": 16
+    }
+  ],
+  "honest_limits": [
+    "SIMULATION on SYNTHETIC data \u2014 not a compliance/conformity claim.",
+    "Quorum defends against an operator + up to (k-1) dishonest witnesses; at >= k COLLUDING witnesses a forged root can be witnessed. So k/n + witness independence + who-runs/pays the witnesses without re-centralizing is the economic question (gate G3), not solved here.",
+    "Liveness: witnesses that withhold cosignatures prevent a quorum -> the checkpoint is un-witnessed (fails safe); the layer never produces a FALSELY witnessed checkpoint, but cannot force availability.",
+    "Garbage-in: witnesses attest the root they were shown, not upstream event truth (RUN 03 bypass limit still applies above the boundary).",
+    "Assurance != certification \u00b7 witnessed-when-quorum != witness-honest-by-construction."
+  ],
+  "honest_verdict": {
+    "k": 3,
+    "n_present": 3,
+    "operator_signature_ok": true,
+    "schema_version": "ncte.witness.v0.1",
+    "valid_witnesses": [
+      "witness-0",
+      "witness-1",
+      "witness-2"
+    ],
+    "witnessed": true
+  },
+  "k": 3,
+  "n": 5,
+  "pre_registered": {
+    "collusion_below_k_blocked": true,
+    "equivocation_detected": true,
+    "honest_k_of_n_witnessed": true,
+    "impersonated_witness_rejected": true,
+    "operator_rewrite_detected": true
+  },
+  "run_id": "P1-Witness-2026-06-09",
+  "scenario_id": "P1-01-WitnessRing",
+  "witnessed_root_R1": "sha256:3ac45fe295e0dbffd9def6e5abb8858b1ccaba94bed5d9599375077f557f1c54"
+}

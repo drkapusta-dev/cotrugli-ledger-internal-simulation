@@ -32,6 +32,18 @@ consolidated **accepted-limits → P1+ map**, and an honest readiness self-asses
 The honest headline across P0: **the technical proof spine is not the weak point.** The open work is
 the **witness layer, adoption, and the economic / legal layer** (P1+).
 
+## P1 — Hardening (in progress)
+
+P1 attacks the accepted limits P0 disclosed. First build: the **witness layer** (closes the largest
+cluster — RUN 04 operator-rewrite / I1 + equivocation).
+
+| # | Scenario | What it tests | Score |
+|---|---|---|---|
+| 01 | [Witness Ring](P1/scenarios/RUN_P1_01_REPORT.md) | k-of-n witnessed checkpoints; operator can't forge quorum or transplant cosigs; equivocation detection | *pending* |
+
+Honest boundary carried into P1: **≥ k colluding witnesses can still witness a lie** → who-runs/pays
+the witnesses without re-centralizing is the economic question (**gate G3**).
+
 ## Running a scenario
 
 Requires a checkout of `ncte-adapter` (point `NCTE_ADAPTER_PATH` at it) and a Python env with its
