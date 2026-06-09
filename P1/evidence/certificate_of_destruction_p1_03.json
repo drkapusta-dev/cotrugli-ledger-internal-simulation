@@ -1,0 +1,14 @@
+{
+  "content_destroyed": true,
+  "erased_at": "2026-06-09T18:30:00Z",
+  "erased_commitment": "sha256:2730fc56727f5e0b4094b0cf673e4b6dd1f99c49ff1844ea847b08229f23e762",
+  "erased_evidence_ref": "ev-004",
+  "method": "salt-shred + off-ledger-content-delete",
+  "request_id": "dsr-2026-06-09-001",
+  "salt_ref": "custody://salt/ev-004",
+  "schema": "ncte.certificate_of_destruction.v0.1",
+  "signature": {
+    "key_id": "operator-k1",
+    "value": "x9VJyCrdTCN6AYY8dovc_8E0XlWTeV5B2B60dx3FsPcuMGXNYopI8UxoPWSAcYtbfF4I3X7DoMdH6jTzjyhsBA"
+  }
+}

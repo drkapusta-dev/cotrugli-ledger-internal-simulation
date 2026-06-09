@@ -1,0 +1,49 @@
+{
+  "c1_witnessed": {
+    "k": 3,
+    "n_present": 3,
+    "operator_signature_ok": true,
+    "schema_version": "ncte.witness.v0.1",
+    "valid_witnesses": [
+      "witness-0",
+      "witness-1",
+      "witness-2"
+    ],
+    "witnessed": true
+  },
+  "c2_witnessed": {
+    "k": 3,
+    "n_present": 3,
+    "operator_signature_ok": true,
+    "schema_version": "ncte.witness.v0.1",
+    "valid_witnesses": [
+      "witness-0",
+      "witness-1",
+      "witness-2"
+    ],
+    "witnessed": true
+  },
+  "consistency_c1_c2": true,
+  "honest_limits": [
+    "SIMULATION on SYNTHETIC data \u2014 not a compliance/conformity claim.",
+    "Witnesses attest the erasure RECORD was made + ordered after C1 + independently co-signed \u2014 NOT that the bytes were physically destroyed. Physical-destruction assurance still needs HSM/enclave attestation (a separate gate); a witness cannot see inside custody.",
+    ">= k witness collusion can still witness a false erasure record (gate G3).",
+    "A salted hash MAY still be personal data under strict GDPR (legal, gate G1).",
+    "Non-linkability is by salt-shred, not deletion of the commitment (the chain stays intact)."
+  ],
+  "k": 3,
+  "n_items": 10,
+  "n_witnesses": 5,
+  "pre_registered": {
+    "c1_witnessed": true,
+    "c2_erasure_witnessed": true,
+    "erasure_appended_consistent": true,
+    "post_erasure_immutable_and_nonlinkable": true,
+    "un_erase_detected": true
+  },
+  "root_R1": "sha256:8d8ea3c9a7a9162e294c62ae76f11a6c71c29dcd371c9d86a181c3c72b595af8",
+  "root_R2": "sha256:43dd9d369a9c4afaa9e87bb0be017cc9355bbd18ef377464468e9816dd041ef2",
+  "run_id": "P1-Witness-2026-06-09",
+  "scenario_id": "P1-03-ErasureWitness",
+  "subject_ref": "ev-004"
+}
