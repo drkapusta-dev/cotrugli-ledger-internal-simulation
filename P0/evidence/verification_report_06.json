@@ -1,0 +1,26 @@
+{
+  "authorized_offline_verify_all": true,
+  "consistency_c1_c2": true,
+  "honest_limits": [
+    "SIMULATION on SYNTHETIC data \u2014 not a compliance/conformity claim.",
+    "A salted hash MAY still be personal data under strict GDPR \u2014 a LEGAL question (gate G1), not resolvable by code; we do not claim it is anonymous.",
+    "The commitment STAYS on the immutable log: non-linkability is by salt-shred, NOT deletion (deleting the commitment would break the chain). Deleting the commitment itself conflicts with immutability -> prunable anchoring / legal opinion (P1+).",
+    "The Certificate of Destruction is an ATTESTED WORKFLOW (custodian self-attests); third-party-verified physical destruction needs an independent witness / HSM-enclave attestation (P1+).",
+    "We cannot prove NO COPY exists anywhere (backups, caches) \u2014 only that the controlled store ran the prescribed erasure and the commitment is no longer subject-linkable.",
+    "In production the salt is RANDOM and shredding is irreversible; here it is seed-derived for reproducibility, and 'shred' models the salt becoming unavailable to all parties."
+  ],
+  "n_items": 12,
+  "post_erasure": {
+    "certificate_verifies": true,
+    "content_retrievable": false,
+    "inclusion_still_verifies": true,
+    "other_items_unaffected": true,
+    "still_linkable_without_salt": false
+  },
+  "public_offline_verify_all": true,
+  "root_R1": "sha256:39c86303bdc4ae8df3709904d6ba538f22ee9dfe2cb485f123736214eda3f229",
+  "root_R2": "sha256:b90c8ac10c018a8fcd58cbb881c966ace5a9469aaf729d0bf12b515da3468531",
+  "run_id": "P0-AIAct-Track1-2026-06-09",
+  "scenario_id": "P0-06-OfflineErasure",
+  "subject_ref": "ev-004"
+}

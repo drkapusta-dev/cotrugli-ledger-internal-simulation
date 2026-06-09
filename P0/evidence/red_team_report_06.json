@@ -1,0 +1,39 @@
+{
+  "attacks": [
+    {
+      "accepted_limit": true,
+      "attack": "1. Re-link the erased commitment without the salt",
+      "defended": true,
+      "detail": "even knowing the content, recomputing the commitment needs the 32-byte salt; 1000 trial salts matched=False; the real salt space is 2^256. ACCEPTED LIMIT: if the CONTENT were low-entropy AND the salt known, a salted commitment could be brute-forced \u2014 which is why the salt is high-entropy and shredded (non-linkable).",
+      "verdict": "DEFENDED (high-entropy salt) + ACCEPTED LIMIT (low-entropy content + known salt would re-link)"
+    },
+    {
+      "accepted_limit": true,
+      "attack": "2. Forge a Certificate of Destruction",
+      "defended": true,
+      "detail": "forged cert signed by attacker -> verifies against custodian key=False (rejected); genuine cert verifies=True. ACCEPTED LIMIT: the certificate attests the custodian RAN the erasure workflow \u2014 it does not third-party-prove the content is physically gone (needs an independent witness / HSM-enclave attestation, P1+).",
+      "verdict": "DEFENDED (forged cert rejected) + ACCEPTED LIMIT (cert attests the WORKFLOW, self-attested)"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "3. Use erasure to silently vanish evidence",
+      "defended": true,
+      "detail": "a Certificate of Destruction names the erased ref (ev-004) and time (2026-06-09T14:30:00Z) and is appended permanently; the commitment's inclusion still verifies. You can see THAT (and when) something was erased \u2014 just not its content. Erasure cannot be used to make evidence vanish without a trace.",
+      "verdict": "DEFENDED \u2014 erasure leaves a permanent, auditable tombstone"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "4. Un-erase (drop the Certificate of Destruction)",
+      "defended": true,
+      "detail": "dropping the appended cert shrinks the log below the witnessed size; a verifier holding C2 (size 13) rejects a presented log of size 12 -> detected=True.",
+      "verdict": "DEFENDED \u2014 can't un-append a witnessed certificate"
+    },
+    {
+      "accepted_limit": false,
+      "attack": "5. Over-claim audit (erasure honesty)",
+      "defended": true,
+      "detail": "over-claim hits: none; discloses salted-hash-may-be-personal-data: True; discloses can't-prove-no-copy: True; discloses self-attested-workflow: True.",
+      "verdict": "DEFENDED \u2014 discloses the legal, no-copy and self-attestation limits"
+    }
+  ]
+}
